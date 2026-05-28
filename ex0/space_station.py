@@ -7,7 +7,7 @@ from datetime import datetime
 
 
 class SpaceStation(BaseModel):
-    """SpaceStation model with his different validated fields."""
+    """SpaceStation model with different validaten fields."""
     station_id: str = Field(..., min_length=3, max_length=10)
     name: str = Field(..., min_length=1, max_length=50)
     crew_size: int = Field(..., ge=1, le=20)
@@ -28,7 +28,7 @@ def main() -> None:
         crew_size=12,
         power_level=42.4,
         oxygen_level=82.1,
-        last_maintenance=datetime(2026, 5, 26, 12, 10))
+        last_maintenance=last_maintenance=datetime(2026, 5, 26, 12, 10))
     print("Valid station created:")
     print(f"ID: {valid.station_id}")
     print(f"Name: {valid.name}")
